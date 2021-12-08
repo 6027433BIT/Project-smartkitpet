@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="home">
+
+        </ion-back-button>
+      </ion-button>
+    </ion-buttons>
+    
+    <ion-title>เพิ่มแมงมุม</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+        <ion-input placeholder="ค้นหาแมงมุม"></ion-input>
+
+        <ion-buttons>
+          <ion-button>
+            <div>ค้นหา</div> <ion-icon name="search"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-buttons style="margin-top: 7%;" color="dark" expand="full" shape="round" routerLink="/add-input">
+          <ion-button>
+            <div> เพิ่มแมงมุม </div> <ion-icon name="add"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+    <div style="margin-top: 7%; margin-bottom: 10%;"> สัตว์เลี้ยงของคุณ </div>
+
+      <ion-row>
+        <ion-col>
+          <div>ลำดับ</div>
+        </ion-col>
+        <ion-col>
+          <div>ชื่อ</div>
+        </ion-col>
+        <ion-col>
+          <div>สายพันธุ์</div>
+        </ion-col>
+        <ion-col>
+          <div>แก้ไข</div>
+        </ion-col>
+        <ion-col>
+          <div>ลบ</div>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col>
+          <div>1</div>
+        </ion-col>
+        <ion-col>
+          <div>แม๊ก</div>
+        </ion-col>
+        <ion-col>
+          <div>Golden Knee</div>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="">
+
+          </ion-icon>
+          
+        </ion-col>
+        <ion-col>
+          
+        </ion-col>
+      </ion-row>
+    
+  </ion-grid>
+
+</ion-content>
