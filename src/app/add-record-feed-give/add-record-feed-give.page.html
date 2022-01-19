@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-back-button defaultHref="home">
+
+        </ion-back-button>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title style="margin-left: 0%;">ให้อาหาร</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-grid>
+
+      <div style="margin-top: 7%;">ชื่อแมงมุม</div>
+        <ion-input placeholder="กรุณาใส่ชื่อแมงมุม" style="margin-top: 2%;" [(ngModel)]="His_Name"></ion-input>
+
+        <div style="margin-top: 7%;">สายพันธุ์</div>
+        <ion-input placeholder="กรุณาใส่ชื่อสายพันธุ์" style="margin-top: 2%;" [(ngModel)]="His_Species"></ion-input>
+
+        <ion-item style="margin-top: 7%;">
+          <ion-label>Date & Time</ion-label>
+          <ion-datetime displayFormat="DD-MMM-YY HH:mm" [(ngModel)]="His_Date_Time" ></ion-datetime>
+        </ion-item>
+        
+        <div style="margin-top: 7%;">ขนาดอาหาร</div>
+        <ion-input placeholder="กรุณาใส่ขนาดอาหาร" style="margin-top: 2%;" [(ngModel)]="His_Feed"></ion-input>
+
+        <div style="margin-top: 10%;">
+            <ion-button color="primary" expand="full" shape="round" (click)="add_his()">
+              ตกลง
+            </ion-button>
+        </div>
+        <div style="margin-top: 5%;">
+            <ion-button color="warning" expand="full" shape="round" routerLink="">
+              ยกเลิก
+            </ion-button>
+        </div>
+    </ion-grid>
+
+</ion-content>

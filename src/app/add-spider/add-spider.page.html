@@ -7,70 +7,85 @@
         </ion-back-button>
       </ion-button>
     </ion-buttons>
-    
+
     <ion-title>เพิ่มแมงมุม</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-grid>
+  <ion-grid style="margin-top: 7.5%;">
+    <ion-row>
+      <ion-col>
         <ion-input placeholder="ค้นหาแมงมุม"></ion-input>
+      </ion-col>
 
-        <ion-buttons>
-          <ion-button>
-            <div>ค้นหา</div> <ion-icon name="search"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-
-        <ion-buttons style="margin-top: 7%;" color="dark" expand="full" shape="round" routerLink="/add-input">
-          <ion-button>
-            <div> เพิ่มแมงมุม </div> <ion-icon name="add"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-
-    <div style="margin-top: 7%; margin-bottom: 10%;"> สัตว์เลี้ยงของคุณ </div>
-
-      <ion-row>
-        <ion-col>
-          <div>ลำดับ</div>
-        </ion-col>
-        <ion-col>
-          <div>ชื่อ</div>
-        </ion-col>
-        <ion-col>
-          <div>สายพันธุ์</div>
-        </ion-col>
-        <ion-col>
-          <div>แก้ไข</div>
-        </ion-col>
-        <ion-col>
-          <div>ลบ</div>
-        </ion-col>
-      </ion-row>
+      <ion-buttons>
+        <ion-button>
+          <ion-col>ค้นหา</ion-col>
+          <ion-col>
+            <ion-icon name="search"></ion-icon>
+          </ion-col>
+        </ion-button>
+      </ion-buttons>
 
 
-      <ion-row>
-        <ion-col>
-          <div>1</div>
-        </ion-col>
-        <ion-col>
-          <div>แม๊ก</div>
-        </ion-col>
-        <ion-col>
-          <div>Golden Knee</div>
-        </ion-col>
-        <ion-col>
-          <ion-icon name="">
-
-          </ion-icon>
-          
-        </ion-col>
-        <ion-col>
-          
-        </ion-col>
-      </ion-row>
-    
+    </ion-row>
   </ion-grid>
+
+
+  <ion-button style="margin-top: 10%;" color="primary" expand="full" shape="round" routerLink="/add-input">
+    เพิ่มแมงมุม
+  </ion-button>
+
+  <div style="margin-top: 15%; margin-bottom: 10%;"> สัตว์เลี้ยงของคุณ </div>
+
+  <ion-row class="row-br">
+    <ion-col class="col-br">
+      <div>ลำดับ</div>
+    </ion-col>
+    <ion-col class="col-br">
+      <div>ชื่อ</div>
+    </ion-col>
+    <ion-col class="col-br">
+      <div>สายพันธุ์</div>
+    </ion-col>
+    <ion-col class="col-br">
+      <div>แก้ไข</div>
+    </ion-col>
+    <ion-col class="col-br">
+      <div>ลบ</div>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row *ngFor="let item of items |async">
+    <ion-col class="col-br">
+      <div>{{item .ID}}</div>
+    </ion-col>
+    <ion-col class="col-br">
+      <div>{{item .Name_Spider}}</div>
+    </ion-col>
+    <ion-col class="col-br">
+      <div>{{item .Species}}</div>
+    </ion-col>
+    <ion-col class="col-br">
+      <ion-buttons>
+        <ion-button routerLink="/edit-spider">
+          <ion-icon name="create-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+    </ion-col>
+    <ion-col class="col-br">
+      <ion-buttons>
+        <ion-button>
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-col>
+  </ion-row>
+
+
 
 </ion-content>

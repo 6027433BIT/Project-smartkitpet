@@ -26,22 +26,26 @@
   text-decoration: none;
 }
 
-ion-col {
-  width: 50%;
-}
-
 ion-img {
-  width: 100px;
+  width: 150px;
 }
 
-.btnm {
+.btnm{
   width: 100%;
-  height: 30px;
+  height: 40px;
 }
 
 ion-card{
   text-align: center;
+   background-color: #f1d68be5; 
 }
+.tm{
+  font-size: 15px;
+}
+ion-content{
+  --ion-background-color: #B1E693; 
+}
+
 
 // ion-row{
 //   border-radius: 5px;

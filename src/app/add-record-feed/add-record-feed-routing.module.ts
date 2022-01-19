@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { EditSpiderPage } from './edit-spider.page';
+import { AddRecordFeedPage } from './add-record-feed.page';
 
 const routes: Routes = [
   {
-    path: ':ID',
-    component: EditSpiderPage
+    path: '',
+    component: AddRecordFeedPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class EditSpiderPageRoutingModule {}
+export class AddRecordFeedPageRoutingModule {}

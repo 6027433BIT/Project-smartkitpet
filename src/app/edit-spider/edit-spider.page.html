@@ -14,22 +14,31 @@
 <ion-content>
 
   <ion-grid>
-    <div>ชื่อ</div>
-    <ion-input placeholder="กรุณาใส่ชื่อ" style="margin-top: 7%;"></ion-input>
+
+    <div style="margin-top: 7%;">ชื่อแมงมุม</div>
+    <ion-input placeholder="กรุณาใส่ชื่อแมงมุม" style="margin-top: 4%;" [(ngModel)]="His_Name"></ion-input>
 
     <div style="margin-top: 7%;">สายพันธุ์</div>
-    <ion-input placeholder="กรุณาใส่สายพันธ์ุ" style="margin-top: 7%;"></ion-input>
+    <ion-input placeholder="กรุณาใส่ชื่อสายพันธุ์" style="margin-top: 4%;" [(ngModel)]="His_Species"></ion-input>
 
-  <div style="margin-top: 10%;">
-      <ion-button color="primary" expand="full" shape="round">
-        แก้ไขข้อมูล
+    <ion-item style="margin-top: 7%;">
+      <ion-label>Date & Time</ion-label>
+      <ion-datetime displayFormat="DD-MMM-YY HH:mm" [(ngModel)]="His_Date_Time"></ion-datetime>
+    </ion-item>
+
+    <div style="margin-top: 7%;">ขนาดอาหาร</div>
+    <ion-input placeholder="กรุณาใส่ขนาดอาหาร" style="margin-top: 4%;" [(ngModel)]="His_Feed"></ion-input>
+
+    <div style="margin-top: 10%;">
+      <ion-button color="primary" expand="full" shape="round" (click)="edit()">
+        ตกลง
       </ion-button>
-  </div>
-  <div style="margin-top: 5%;">
-      <ion-button color="warning" expand="full" shape="round">
+    </div>
+    <div style="margin-top: 5%;">
+      <ion-button color="warning" expand="full" shape="round" routerLink="">
         ยกเลิก
       </ion-button>
-  </div>
+    </div>
   </ion-grid>
 
 </ion-content>

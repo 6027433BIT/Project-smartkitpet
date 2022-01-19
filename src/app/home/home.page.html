@@ -1,6 +1,6 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
+    <ion-title style="margin-left: auto;">
       หน้าหลัก
     </ion-title>
   </ion-toolbar>
@@ -9,7 +9,7 @@
 <ion-content>
 
 
-  <ion-card>
+  <!-- <ion-card>
     <ion-card-header>
       <ion-img src="\assets\icon\safe-box.png" style="width: 45%; margin-left: 27%;">
 
@@ -17,31 +17,31 @@
     </ion-card-header>
     <ion-card-title>
       <ion-button color="primary" expand="full" shape="round" routerLink="/add-spider">
-        เพิ่มแมงมุม+
+        เพิ่มแมงมุม
       </ion-button>
     </ion-card-title>
-  </ion-card>
+  </ion-card> -->
 
   <ion-grid>
     <ion-row>
       <ion-col>
         <ion-card>
-            <ion-img src="\assets\icon\clock.png" style="width: 25%;">
+            <ion-img src="\assets\icon\notes.png" style="width: 90px; margin-left: 37%; margin-bottom: 7%; margin-top: 5%;">
             </ion-img>
           <ion-card-title>
-            <ion-button class="btnm" color="primary" expand="full" shape="round" routerLink="/add-spider">
-              <div>บันทึกการให้อาหาร</div>
+            <ion-button class="btnm" color="primary" style="margin-bottom: 6%;" expand="full" shape="round" routerLink="/add-record-feed">
+              <div class="tm">บันทึกการให้อาหาร</div>
             </ion-button>
           </ion-card-title>
         </ion-card>
       </ion-col>
       <ion-col>
         <ion-card>
-          <ion-img src="\assets\icon\clock.png" style="width: 25%;">
+          <ion-img src="\assets\icon\clock.png" style="width: 90px; margin-left: 34%; margin-bottom: 7%; margin-top: 5%;">
           </ion-img>
           <ion-card-title>
-            <ion-button class="btnm" color="primary" expand="full" shape="round" routerLink="/add-spider">
-              <div>บันทึกการให้อาหาร</div>
+            <ion-button class="btnm" color="primary" style="margin-bottom: 6%;" expand="full" shape="round" routerLink="/history-feed">
+              <div class="tm">ประวัติการให้อาหาร</div>
             </ion-button>
           </ion-card-title>
         </ion-card>
@@ -49,32 +49,27 @@
     </ion-row>
   </ion-grid>
 
-
+    <!-- <ion-grid>
+      <ion-card>
+        <ion-card-header>
+          <ion-row>
+            <ion-col>
+              <ion-img src="\assets\icon\tarantula.png" style="width: 100%;"></ion-img>
+            </ion-col>
+            <ion-col>
+              <ion-img src="\assets\icon\spider-insect.png" style="width: 100%; margin-left: 5%;"></ion-img>
+            </ion-col>
+            <ion-col>
+              <ion-img src="\assets\icon\tarantula2.png" style="width: 100%; margin-left: 5%;"></ion-img>
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+        <ion-card-title>
+          <ion-button class="btnm" color="primary" expand="full" style="margin-bottom: 6%;" shape="round" routerLink="/info-spider">
+            ข้อมูลแมงมุม
+          </ion-button>
+        </ion-card-title>
+      </ion-card>
+    </ion-grid> -->
 
 </ion-content>
-
-<!-- <ion-card>
-  <ion-card-header>
-    <ion-img src="\assets\icon\clock.png" style="width: 30%; margin-left: 12%;">
-
-    </ion-img>
-  </ion-card-header>
-  <ion-card-title>
-    <ion-button color="primary" expand="half" shape="round" routerLink="/add-spider">
-      <div>บันทึกการให้อาหาร</div>
-    </ion-button>
-  </ion-card-title>
-</ion-card> -->
-
-<!-- <ion-card>
-  <ion-card-header>
-    <ion-img src="\assets\icon\clock.png" style="width: 30%;">
-
-    </ion-img>
-  </ion-card-header>
-  <ion-card-title>
-    <ion-button color="primary" expand="half" shape="round" routerLink="/add-spider">
-      <div>ประวัติการให้อาหาร</div>
-    </ion-button>
-  </ion-card-title>
-</ion-card> -->

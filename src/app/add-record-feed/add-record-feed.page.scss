@@ -1,0 +1,28 @@
+.row-br {
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.col-br {
+  text-align: center;
+  border-style: solid;
+  border-width: 1px;
+}
+.tx1{
+  font-size: large;
+  font-family: fantasy;
+  color: rgb(0, 0, 0);
+}
+.tx2{
+  font-size: 13px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(0, 0, 0);
+}
+ion-content{
+  --ion-background-color: #B1E693; 
+}
+ion-card{
+  background-color: #f1d68be5;
+  color: rgb(0, 0, 0);
+}

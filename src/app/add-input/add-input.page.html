@@ -15,18 +15,18 @@
 
   <ion-grid>
     <div>ชื่อ</div>
-    <ion-input placeholder="กรุณาใส่ชื่อ" style="margin-top: 7%;"></ion-input>
+    <ion-input placeholder="กรุณาใส่ชื่อ" style="margin-top: 7%;" [(ngModel)]="Spi_Name_Spider"></ion-input>
 
     <div style="margin-top: 7%;">สายพันธุ์</div>
-    <ion-input placeholder="กรุณาใส่สายพันธ์ุ" style="margin-top: 7%;"></ion-input>
+    <ion-input placeholder="กรุณาใส่สายพันธ์ุ" style="margin-top: 7%;" [(ngModel)]="Spi_Species"></ion-input>
 
   <div style="margin-top: 10%;">
-      <ion-button color="primary" expand="full" shape="round">
+      <ion-button color="primary" expand="full" shape="round" (click)="add_input()">
         ตกลง
       </ion-button>
   </div>
   <div style="margin-top: 5%;">
-      <ion-button color="warning" expand="full" shape="round">
+      <ion-button color="warning" expand="full" shape="round" routerLink="">
         ยกเลิก
       </ion-button>
   </div>
