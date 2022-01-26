@@ -5,7 +5,7 @@ import { AddRecordFeedGivePage } from './add-record-feed-give.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':petid/:id',
     component: AddRecordFeedGivePage
   }
 ];

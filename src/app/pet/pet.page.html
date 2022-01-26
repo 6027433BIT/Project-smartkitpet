@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item style="margin-bottom: 10px;">
+    <ion-label position="fixed">เพิ่มสัตว์เลี้ยง</ion-label>
+    <ion-input [(ngModel)]="pet_name"></ion-input>
+    <ion-button (click)="add()">เพิ่ม</ion-button>
+  </ion-item>
+
+  <ion-item *ngFor="let item of items|async" >
+    <div>ชื่อสัตว์ {{item.name}}</div>
+    <ion-button color="success" slot="end" [routerLink]=" '/home/'+item.id ">จัดการสัตว์เลี้ยง</ion-button>
+  </ion-item>
+</ion-content> 

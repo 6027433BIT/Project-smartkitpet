@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AddRecordFeedPageRoutingModule } from './add-record-feed-routing.module';
+import { PetPageRoutingModule } from './pet-routing.module';
 
-import { AddRecordFeedPage } from './add-record-feed.page';
+import { PetPage } from './pet.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AddRecordFeedPageRoutingModule
+    PetPageRoutingModule
   ],
-  declarations: [AddRecordFeedPage]
+  declarations: [PetPage]
 })
-export class AddRecordFeedPageModule {}
+export class PetPageModule {}
