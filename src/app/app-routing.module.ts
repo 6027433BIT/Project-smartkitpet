@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pet',
     pathMatch: 'full'
   },
   {
@@ -24,16 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./edit-spider/edit-spider.module').then( m => m.EditSpiderPageModule)
   },
   {
-    path: 'add-record-feed',
-    loadChildren: () => import('./add-record-feed/add-record-feed.module').then( m => m.AddRecordFeedPageModule)
-  },
-  {
     path: 'add-record-feed-give',
     loadChildren: () => import('./add-record-feed-give/add-record-feed-give.module').then( m => m.AddRecordFeedGivePageModule)
-  },
-  {
-    path: 'history-feed',
-    loadChildren: () => import('./history-feed/history-feed.module').then( m => m.HistoryFeedPageModule)
   },
   {
     path: 'info-spider',
@@ -47,6 +39,11 @@ const routes: Routes = [
     path: 'info-sppder-feverite',
     loadChildren: () => import('./info-sppder-feverite/info-sppder-feverite.module').then( m => m.InfoSppderFeveritePageModule)
   },
+  {
+    path: 'pet',
+    loadChildren: () => import('./pet/pet.module').then( m => m.PetPageModule)
+  },
+
 ];
 
 @NgModule({

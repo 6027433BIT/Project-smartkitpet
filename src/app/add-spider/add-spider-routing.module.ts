@@ -5,7 +5,7 @@ import { AddSpiderPage } from './add-spider.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: ':id',
     component: AddSpiderPage
   }
 ];

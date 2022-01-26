@@ -1,3 +1,5 @@
+import { AddRecordFeedPage } from './../add-record-feed/add-record-feed.page';
+import { HistoryFeedPage } from './../history-feed/history-feed.page';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -14,6 +16,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage,
+  HistoryFeedPage,
+  AddRecordFeedPage
+  ]
 })
 export class HomePageModule {}

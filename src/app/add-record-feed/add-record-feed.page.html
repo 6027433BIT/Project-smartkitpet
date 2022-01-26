@@ -8,22 +8,18 @@
         </ion-back-button>
       </ion-button>
     </ion-buttons>
-
     <ion-title>บันทึกให้อาหาร</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <!-- 
   <ion-button style="margin-top: 7.5%;" color="warning" expand="full" shape="round" routerLink="/add-record-feed-give">
     <div class="tx1">ให้อาหาร</div>
-  </ion-button>
-  <ion-grid>
-    <ion-text class="tx1" style="margin-left: 3%;">บันทึกการให้อาหารสัตว์เลี้ยงของคุณ</ion-text>
-  </ion-grid>
+  </ion-button> -->
 
-  <ion-grid *ngFor="let item of items |async">
-    <ion-card>
+  <ion-grid *ngIf="pet | async as p">
+    <ion-card *ngFor="let item of items |async">
       <ion-row>
         <ion-card-content>
 
@@ -31,21 +27,21 @@
             <ion-img src="\assets\icon\safe-box.png" style="width: 45%; margin-left: 27%;"></ion-img>
           </ion-card-header>
 
-          
-            <ion-card-title style="font-size: 15px;">
-              <div> ชื่อแมงมุม : {{item .Name_Spider}}</div>
-            </ion-card-title>
-          
-          <ion-card-title style="font-size: 15px; margin-top: 3%;"> สายพันธุ์ : {{item .Species}}</ion-card-title>
+          <ion-card-title style="font-size: 15px;">
+            <div> ชื่อแมงมุม : {{p.name}}</div>
+          </ion-card-title>
+
+          <ion-card-title style="font-size: 15px; margin-top: 3%;"> สายพันธุ์ : {{item.Species}}</ion-card-title>
           <ion-card-title style="font-size: 15px; margin-top: 3%;"> จำนวนอาหารที่ให้ : {{item .Feed}}</ion-card-title>
           <ion-card-title style="font-size: 15px;  margin-top: 3%;"> วันที่และเวลา :</ion-card-title>
-          <ion-card-subtitle style="font-size: 12px;  margin-top: 3%;">{{item .Date_Time}}</ion-card-subtitle>
+          <ion-card-subtitle style="font-size: 12px;  margin-top: 3%;">{{item.Date_Time}}</ion-card-subtitle>
         </ion-card-content>
       </ion-row>
       <ion-card-title style="text-align: center;">
         <ion-col>
-          <ion-button color="warning" style="margin-bottom: 5%;" expand="haft" shape="round" [routerLink]="'/edit-spider/' + item.ID">
-            แก้ไขข้อมูล
+          <ion-button color="warning" style="margin-bottom: 5%;" expand="haft" shape="round"
+            [routerLink]="'/add-record-feed-give/' + p.id + '/' + item.id">
+            แก้ไข
           </ion-button>
         </ion-col>
       </ion-card-title>

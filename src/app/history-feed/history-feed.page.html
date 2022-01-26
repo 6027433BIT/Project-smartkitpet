@@ -12,67 +12,36 @@
 </ion-header>
 
 <ion-content>
-  
+
   <div class="tx2" style="margin-top: 5%; margin-left: 7%;"> ประวัติให้อาหารสัตว์เลี้ยงของคุณ</div>
 
-  <!-- <ion-row class="row-br">
-    <ion-col class="col-br">
-      <div>ชื่อ</div>
-    </ion-col>
-    <ion-col class="col-br">
-      <div>สายพันธุ์</div>
-    </ion-col>
-    <ion-col class="col-br">
-      <div>วันที่ และ เวลา</div>
-    </ion-col>
-    <ion-col class="col-br">
-      <div>ขนาด</div>
-    </ion-col>
-  </ion-row>
 
-
-  <ion-row *ngFor="let item of items |async">
-    <ion-col class="col-br">
-      <div>{{item .Name_Spider}}</div>
-    </ion-col>
-    <ion-col class="col-br">
-      <div>{{item .Species}}</div>
-    </ion-col>
-    <ion-col class="col-br">
-      <div>{{item .Date_Time}}</div>
-    </ion-col>
-    <ion-col class="col-br">
-      <div>{{item .Feed}}</div>
-    </ion-col>
-  </ion-row> -->
-
-
-  <ion-grid  *ngFor="let item of items |async">
-    <ion-card>
-      <ion-row >
+  <ion-grid *ngIf="pet | async as p">
+    <ion-card *ngFor="let item of items |async">
+      <ion-row>
         <ion-card-content>
 
           <ion-card-header>
             <ion-img src="\assets\icon\safe-box.png" style="width: 45%; margin-left: 27%;"></ion-img>
           </ion-card-header>
-          
-              <ion-card-title style="font-size: 15px;">
-                <div> ชื่อแมงมุม : {{item .Name_Spider}}</div>
-              </ion-card-title>
-            
-            <ion-card-title style="font-size: 15px; margin-top: 3%;"> สายพันธุ์ : {{item .Species}}</ion-card-title>
-            <ion-card-title style="font-size: 15px; margin-top: 3%;"> จำนวนอาหารที่ให้ : {{item .Feed}}</ion-card-title>
-            <ion-card-title style="font-size: 15px;  margin-top: 3%;"> วันที่และเวลา :</ion-card-title>
-            <ion-card-subtitle style="font-size: 12px;  margin-top: 3%;">{{item .Date_Time}}</ion-card-subtitle>
-          </ion-card-content>
-        </ion-row>
-        <ion-card-title style="text-align: center;">
-          <ion-col>
-            <ion-button color="danger" style="margin-bottom: 5%;" expand="haft" shape="round" (click)="remove(item.ID)">
-              ลบข้อมูล
-            </ion-button>
-          </ion-col>
-        </ion-card-title>
+
+          <ion-card-title style="font-size: 15px;">
+            <div> ชื่อแมงมุม : {{p.name}}</div>
+          </ion-card-title>
+
+          <ion-card-title style="font-size: 15px; margin-top: 3%;"> สายพันธุ์ : {{item.Species}}</ion-card-title>
+          <ion-card-title style="font-size: 15px; margin-top: 3%;"> จำนวนอาหารที่ให้ : {{item .Feed}}</ion-card-title>
+          <ion-card-title style="font-size: 15px;  margin-top: 3%;"> วันที่และเวลา :</ion-card-title>
+          <ion-card-subtitle style="font-size: 12px;  margin-top: 3%;">{{item.Date_Time}}</ion-card-subtitle>
+        </ion-card-content>
+      </ion-row>
+      <ion-card-title style="text-align: center;">
+        <ion-col>
+          <ion-button color="danger" style="margin-bottom: 5%;" expand="haft" shape="round" (click)="remove(item.id)">
+            ลบข้อมูล
+          </ion-button>
+        </ion-col>
+      </ion-card-title>
     </ion-card>
   </ion-grid>
 

@@ -1,12 +1,41 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="margin-left: auto;">
-      หน้าหลัก
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="pet"></ion-back-button>
+    </ion-buttons>
+    <ion-title>บันทึกการให้อาหาร</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-grid>
+
+    <ion-card>    
+      
+      <ion-item>
+        <div style="margin-top: 7%;">ขนาดอาหาร</div>
+        <ion-input placeholder="กรุณาใส่ขนาดอาหาร" style="margin-top: 2%;" [(ngModel)]="His_Feed"></ion-input>
+      </ion-item>
+
+      <ion-item style="margin-top: 7%;">
+        <ion-label>Date & Time</ion-label>
+        <ion-datetime displayFormat="DD-MMM-YY HH:mm" [(ngModel)]="His_Date_Time"></ion-datetime>
+      </ion-item>
+      
+      <div style="margin-top: 10%;">
+        <ion-button color="primary" expand="full" shape="round" (click)="add_his()">
+          ตกลง
+        </ion-button>
+      </div>  
+
+      <div style="margin-top: 5%;">
+        <ion-button color="warning" expand="full" shape="round" routerLink="">
+          ยกเลิก
+        </ion-button>
+      </div>
+    </ion-card>
+  </ion-grid>
 
 
   <!-- <ion-card>
@@ -26,21 +55,25 @@
     <ion-row>
       <ion-col>
         <ion-card>
-            <ion-img src="\assets\icon\notes.png" style="width: 90px; margin-left: 37%; margin-bottom: 7%; margin-top: 5%;">
-            </ion-img>
+          <ion-img src="\assets\icon\notes.png"
+            style="width: 90px; margin-left: 37%; margin-bottom: 7%; margin-top: 5%;">
+          </ion-img>
           <ion-card-title>
-            <ion-button class="btnm" color="primary" style="margin-bottom: 6%;" expand="full" shape="round" routerLink="/add-record-feed">
-              <div class="tm">บันทึกการให้อาหาร</div>
+            <ion-button class="btnm" color="primary" style="margin-bottom: 6%;" expand="full" shape="round"
+              [routerLink]="'manage'">
+              <div class="tm">จัดการให้อาหาร</div>
             </ion-button>
           </ion-card-title>
         </ion-card>
       </ion-col>
       <ion-col>
         <ion-card>
-          <ion-img src="\assets\icon\clock.png" style="width: 90px; margin-left: 34%; margin-bottom: 7%; margin-top: 5%;">
+          <ion-img src="\assets\icon\clock.png"
+            style="width: 90px; margin-left: 34%; margin-bottom: 7%; margin-top: 5%;">
           </ion-img>
           <ion-card-title>
-            <ion-button class="btnm" color="primary" style="margin-bottom: 6%;" expand="full" shape="round" routerLink="/history-feed">
+            <ion-button class="btnm" color="primary" style="margin-bottom: 6%;" expand="full" shape="round"
+              [routerLink]="'history'">
               <div class="tm">ประวัติการให้อาหาร</div>
             </ion-button>
           </ion-card-title>
@@ -49,7 +82,7 @@
     </ion-row>
   </ion-grid>
 
-    <!-- <ion-grid>
+  <!-- <ion-grid>
       <ion-card>
         <ion-card-header>
           <ion-row>
